@@ -1407,6 +1407,44 @@ footer {
   margin-top: 4px;
 }
 
+/* ── FEATURED – RHEUMO DOR ── */
+#featuredRD {
+  position: relative;
+  z-index: 1;
+  background: linear-gradient(160deg, #0c1f10 0%, #173a1e 55%, #1f5228 100%);
+  padding: 90px 20px;
+  text-align: center;
+  overflow: hidden;
+}
+
+#featuredRD::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 60% 55% at 50% 50%, rgba(45, 184, 74, .1), transparent);
+  pointer-events: none;
+}
+
+#featuredRD .section-eyebrow {
+  color: var(--gold-light);
+  margin-bottom: 10px;
+}
+
+#featuredRD .section-title {
+  color: #fff;
+  margin-bottom: 48px;
+}
+
+.spotlight-card--rd {
+  border-color: rgba(45, 184, 74, .35);
+}
+
+.spot-tag--rd {
+  background: linear-gradient(135deg, var(--red), #e74c3c) !important;
+  color: #fff !important;
+  box-shadow: 0 4px 18px rgba(192, 57, 43, .5) !important;
+}
+
 /* ── RESPONSIVE ── */
 @media (max-width: 860px) {
   .hero-inner {
