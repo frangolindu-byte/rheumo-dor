@@ -652,6 +652,7 @@ body {
 
 .slider-outer {
   overflow: hidden;
+  -webkit-mask-image: linear-gradient(90deg, transparent, black 8%, black 92%, transparent);
   mask-image: linear-gradient(90deg, transparent, black 8%, black 92%, transparent);
 }
 
@@ -1489,7 +1490,7 @@ footer {
     max-width: 300px;
   }
 
-  .hero-Pills {
+  .hero-pills {
     justify-content: center;
   }
 }
@@ -1529,5 +1530,19 @@ footer {
   .cta-btn {
     font-size: 1.05rem !important;
     padding: 16px 32px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  #float-wa {
+    width: 50px;
+    height: 50px;
+    bottom: 16px;
+    right: 16px;
+  }
+
+  #float-wa svg {
+    width: 26px;
+    height: 26px;
   }
 }

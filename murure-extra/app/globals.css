@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800;900&family=Inter:wght@400;500;600&display=swap');
+
+:root {
+    --font-manrope: 'Manrope', sans-serif;
+    --font-inter: 'Inter', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-inter);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 4px;
+}
+
+::-webkit-scrollbar-track {
+    background: #0d1f0d;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #C8962A;
+    border-radius: 2px;
+}
+
+/* Focus ring */
+:focus-visible {
+    outline: 2px solid #C8962A;
+    outline-offset: 3px;
+}
+
+/* Bg radial gradient utility */
+.bg-gradient-radial {
+    background: radial-gradient(ellipse at center, var(--tw-gradient-stops));
+}
+
+/* Smooth font rendering */
+body {
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}

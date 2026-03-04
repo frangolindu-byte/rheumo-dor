@@ -1,4 +1,5 @@
 // ═══════════════ PARTICLES ═══════════════
+const isMobile = window.matchMedia('(max-width: 768px)').matches;
 const canvas = document.getElementById('particles-canvas');
 const ctx = canvas.getContext('2d');
 let W, H, particles = [];
@@ -37,7 +38,9 @@ class Particle {
   }
 }
 
-for(let i = 0; i < 90; i++) particles.push(new Particle());
+const particleCount = isMobile ? 0 : 90;
+for(let i = 0; i < particleCount; i++) particles.push(new Particle());
+if(isMobile) canvas.style.display = 'none';
 
 function drawConnections() {
   for(let i = 0; i < particles.length; i++) {
@@ -167,7 +170,7 @@ if(baContainer) {
 }
 
 // ═══════════════ PARALLAX HERO IMAGE ═══════════════
-const heroImg = document.querySelector('.hero-float');
+const heroImg = document.querySelector('.hero-img img');
 window.addEventListener('mousemove', e => {
   if(!heroImg) return;
   const x = (e.clientX / window.innerWidth - .5) * 18;
